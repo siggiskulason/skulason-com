@@ -1,10 +1,92 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Sigurdur Darri Lisiecki Skulason</title>
-</head>
-<body>
-  <img src="https://www.skulason.com/image-w.png"> 
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skulason IT</title>
+    <meta name="description" content="Skulason IT — enskild firma" />
+    <style>
+      :root { --bg:#0b1220; --card:#0f172a; --text:#e5e7eb; --muted:#94a3b8; }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        background: radial-gradient(1000px 600px at 20% -10%, #0ea5e920, transparent),
+                    radial-gradient(1200px 800px at 120% 120%, #3b82f620, transparent),
+                    var(--bg);
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+      .card {
+        width: min(720px, 92vw);
+        background: color-mix(in srgb, var(--card) 92%, black);
+        border: 1px solid #1f2937;
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        margin-bottom: 16px;
+      }
+      .logo img {
+        width: 84px;
+        height: 84px;
+      }
+      h1 {
+        font-size: clamp(28px, 4vw, 40px);
+        line-height: 1.1;
+        margin: 0;
+        letter-spacing: -0.02em;
+      }
+      .tagline {
+        margin: 4px 0 0 0;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 12px;
+      }
+      address {
+        margin: 22px 0 0 0;
+        font-style: normal;
+        font-size: clamp(14px, 2.4vw, 16px);
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .footer {
+        margin-top: 22px;
+        font-size: 12px;
+        color: #64748b;
+      }
+      .footer a{
+        color: #93c5fd;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card" role="main">
+      <div class="logo">
+        <img src="./skulason-it-logo.svg" alt="Skulason IT logo" />
+        <div>
+          <h1>Skulason IT</h1>
+          <p class="tagline">Enskild firma</p>
+        </div>
+      </div>
+
+      <address>
+        Skulason IT,  QSG 643-N Billo, 106 46 Stockholm,Sweden
+      </address>
+
+      <p class="footer">© <span id="y"></span> Skulason IT. All rights reserved.</p>
+    </main>
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
